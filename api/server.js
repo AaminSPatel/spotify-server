@@ -16,7 +16,11 @@ const app = express();
 app.use(express.json())
 //const router = express.Router();
 //app.use(express.static('public'))
-app.use(cors())
+app.use(cors({
+  origin: 'https://aaminspatel.github.io', // Allow requests from this origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
+}));
 //const PORT = process.env.PORT || 7000 ;
 const PORT = 7000;
 //const MONGOURL = process.env.MONGO_URL
