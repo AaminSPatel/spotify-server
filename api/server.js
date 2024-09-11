@@ -21,13 +21,8 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
 }));
-//const PORT = process.env.PORT || 7000 ;
 const PORT = 7000;
-//const MONGOURL = process.env.MONGO_URL
-//const MONGOURL = 'mongodb+srv://locomail112:CDRZcXJ2OCg7jxFn@cluster0.yanxhub.mongodb.net/'
-//console.log(process.env.PORT);
 
-// Connect to MongoDB
 connectDB();
 
  app.get('/',(req,res)=>{
