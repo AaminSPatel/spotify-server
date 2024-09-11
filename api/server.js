@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-//import mongoose  from 'mongoose';
+import mongoose  from 'mongoose';
 import connectDB from '../db.js';
 dotenv.config();
 import songRoutes from '../routes/songsRoutes.js';
@@ -11,7 +11,6 @@ import likedSongsRoutes from '../routes/likedSongsRoutes.js'
 import playlistRoutes from '../routes/playlistRoutes.js'
 import genreRoutes from '../routes/genreRoutes.js'
 import cors from 'cors';
-
 const app = express();
 app.use(express.json())
 //const router = express.Router();
@@ -36,16 +35,7 @@ app.use('/api/artist',artistRoutes);
 app.use('/api/liked',likedSongsRoutes);
 app.use('/api/playlist',playlistRoutes);
 app.use('/api/genre',genreRoutes);
-/* app.get('/users', async (req, res) => {
-    try {
-      const users = await User.find();
-      console.log(users);
-      res.json(users);
-    } catch (err) {
-      res.status(500).json({ message: err.message });
-    }
-  });
- */
+
 app.listen(PORT,()=>{
     console.log('app Is Listining on',PORT)
 })
