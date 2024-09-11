@@ -8,6 +8,9 @@
     "start": "nodemon api/server.js",
     "dev": "node api/server.js"
   },
+  "engines": {
+  "node": "16.x"
+},
   "author": "aamin patel",
   "license": "ISC",
   "dependencies": {
