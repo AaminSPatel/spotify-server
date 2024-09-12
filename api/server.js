@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import mongoose  from 'mongoose';
+//import mongoose  from 'mongoose';
 import connectDB from '../db.js';
 dotenv.config();
 import songRoutes from '../routes/songsRoutes.js';
@@ -24,7 +24,7 @@ const PORT = 7000;
 
 connectDB();
 
- app.get('/',(req,res)=>{
+ app.get('/api/',(req,res)=>{
    res.send('Hello World')
    // db.spotify.songs.find({})
  })
